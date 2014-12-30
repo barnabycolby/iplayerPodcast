@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Read the config file
+configFile=./podcastFeed.cfg
+source $configFile
+
+# Redirect standard output to the pyx output file
+exec 1>> $pyxOutputFile
+
+echo "(rss"
+echo "Axmlns:itunes http://www.itunes.com/dtds/podcast-1.0.dtd"
+echo "Aversion 2.0"
+echo "(channel"
+echo "(title"
+echo "-$podcastTitle"
+echo ")title"
+echo "(link"
+echo "-$podcastURL"
+echo ")link"
+echo "(description"
+echo "-$podcastDescription"
+echo ")description"
+echo "(lastBuildDate"
+echo "-$(date -R)"
+echo ")lastBuildDate"
+echo "(image"
+echo "(url"
+echo "-$podcastImageURL"
+echo ")url"
+echo "(title"
+echo "-$podcastTitle"
+echo ")title"
+echo "(link"
+echo "-$podcastURL"
+echo ")link"
+echo ")image"
+echo "(language"
+echo "-en-gb"
+echo ")language"
+echo "C We don't want this podcast showing up in the podcast directory, so we'll attempt to block it at first "
+echo "(itunes:block"
+echo "-yes"
+echo ")itunes:block"
+echo "C Itunes channel tags "
+echo "(itunes:author"
+echo "-$podcastAuthor"
+echo ")itunes:author"
+echo "C Has a minimum size of 1400x1400 "
+echo "(itunes:image"
+echo "Ahref $podcastImageURL"
+echo ")itunes:image"

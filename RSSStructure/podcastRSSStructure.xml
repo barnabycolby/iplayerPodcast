@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+	<channel>
+		<title>$("Zane Lowe Radio 1 Show Podcast")</title>
+		<link>$("http://www.barnabycolby.com/zanelowepodcast/")</link>
+		<description>A podcast allowing Zane Lowe's radio 1 shows to be downloaded and listened to on demand.</description>
+		<lastBuildDate>Sat, 20 Dec 2014 12:00:00 GMTd</lastBuildDate>
+		<image>
+			<url>$("http://www.barnabycolby.com/zanelowepodcast/podcastImage.jpg")</url>
+			<title>$("Zane Lowe Radio 1 Show Podcast")</title>
+			<link>$("http://www.barnabycolby.com/zanelowepodcast/")</link>
+		</image>
+		<language>en-gb</language>
+
+		<!-- We don't want this podcast showing up in the podcast directory, so we'll attempt to block it at first -->
+		<itunes:block>yes</itunes:block>
+
+		<!-- Itunes channel tags -->
+		<itunes:author>Barnaby Colby</itunes:author>
+		<!-- Has a minimum size of 1400x1400 -->
+		<itunes:image href="$(http://www.barnabycolby.com/zanelowepodcast/podcastImage.jpg)" />
+
+		<item>
+			<title>Monday night versus with Rodigan</title>
+			<link></link>
+			<description>Zane talks to Rodigan, the sound clash champion.</description>
+			<!-- Must conform to RFC 2822 -->
+			<pubDate>Sat, 20 Dec 2014 13:00:00 GMT</pubDate>
+			<!-- The url of the media file (so that we know it's unique) -->
+			<guid>http://www.barnabycolby.com/zanelowepodcast/Show123.m4a</guid>
+
+			<!-- Itunes item tags -->
+			<!-- HH:MM:SS, H:MM:SS, MM:SS or M:SS -->
+			<itunes:duration>2:00:00</itunes:duration>
+			<itunes:subtitle>$(description)></itunes:subtitle>
+
+			<enclosure url="http://www.barnabycolby.com/zanelowepodcast/Show123.m4a" length="1024000" type="audio/x-m4a" />
+		</item>
+
+	</channel>
+</rss>

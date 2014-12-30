@@ -1,0 +1,14 @@
+downloadZaneLoweAndGeneratePodcastFeed
+===========================================
+- Need to name files as pid's on download
+- Need to copy files to server locations to make them available
+- Need to edit config to use real values
+- Validate feed against w3 rss feed validator
+- Use online test to view what feed looks like to a consumer
+- Move to pi
+- Set up to run on cron
+
+podcastFeedGenerator
+===========================================
+- Need to research whether I should be calculating mime types by the extension and not by querying the file...little bit dodgy
+- Add album artwork to each podcast item
