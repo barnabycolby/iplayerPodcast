@@ -31,7 +31,7 @@ sh $writeClosingTagsScript
 echo "Done."
 
 echo -n "Converting pyx file to xml....."
-xml depyx $pyxOutputFile > $rssOutputFile
+$xmlstarlet depyx $pyxOutputFile > $rssOutputFile
 echo "Done."
 
 echo -n "Formatting rss output file....."
