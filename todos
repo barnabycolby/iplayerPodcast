@@ -1,6 +1,8 @@
 downloadZaneLoweAndGeneratePodcastFeed
 ===========================================
 - Need to copy files to server locations to make them available
+- Only copy feed to server if it's a valid rss feed
+- Need to prevent the hard drive from getting filled up with shows
 - Need to edit config to use real values
 - Validate feed against w3 rss feed validator
 - Use online test to view what feed looks like to a consumer
