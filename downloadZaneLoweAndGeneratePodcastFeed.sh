@@ -69,6 +69,12 @@ done
 # Generate the podcast rss feed
 sh $podcastFeedGeneratorScript
 
+# Copy the media files and feed file to the appropriate locations to make them available on the web server
+echo -n "Copying the files to the local media file directory....."
+cp -u $showDirectory/* $mediaFileDirectoryPath
+cp $rssOutputFile $mediaFileDirectoryPath
+echo "Done."
+
 # Clean up
 exec 1>&- 2>&-
 wait $teepid
