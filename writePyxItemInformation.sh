@@ -5,7 +5,8 @@ if [[ $# -ne 1 ]]; then
 	exit 1
 fi
 
-source ./podcastFeed.cfg
+configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
+source $configFile
 
 # We assume that the filename is in the format 'pid.xxx' so that we can get the related information
 filename=$1
