@@ -3,6 +3,7 @@ downloadZaneLoweAndGeneratePodcastFeed
 - Only copy feed to server if it's a valid rss feed
 - Need to prevent the hard drive from getting filled up with shows
 - Use online test to view what feed looks like to a consumer
+- Add podcast image and check that it's available
 
 podcastFeedGenerator
 ===========================================
