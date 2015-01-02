@@ -18,13 +18,14 @@ source $configFile
 echo "Done."
 
 # Redirect all program output to the logfile
+filePipePath="${HOME}/.iplayerPodcast/$nameOfFilePipe"
 echo -n "Opening FIFO pipe....."
-mkfifo $nameOfFilePipe
+mkfifo $filePipePath
 echo "Done."
 echo -n "Piping output to logfile as well as stdout....."
-tee $logFile < $nameOfFilePipe &
+tee $logFile < $filePipePath &
 teepid=$!
-exec > $nameOfFilePipe 2>&1
+exec > $filePipePath 2>&1
 echo "Done."
 
 # Clear the log
@@ -71,4 +72,4 @@ sh $podcastFeedGeneratorScript
 # Clean up
 exec 1>&- 2>&-
 wait $teepid
-rm $nameOfFilePipe
+rm $filePipePath
