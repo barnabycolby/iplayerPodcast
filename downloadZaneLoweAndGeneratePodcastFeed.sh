@@ -7,10 +7,6 @@ containsElement () {
 	return 1
 }
 
-# Write the start time
-echo -n "Script started at: "
-date '+%A %d %B %Y %X'
-
 # Read the config file
 configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 echo -n "Reading config....."
@@ -30,6 +26,10 @@ echo "Done."
 
 # Clear the log
 > $logFile
+
+# Write the start time
+echo -n "Script started at: "
+date '+%A %d %B %Y %X'
 
 # Record the shows
 echo "Running the pvr"
@@ -67,6 +67,7 @@ do
 done
 
 # Generate the podcast rss feed
+echo "The location of the podcastFeedGenerator script is $podcastFeedGeneratorScript"
 sh $podcastFeedGeneratorScript
 
 # Copy the media files and feed file to the appropriate locations to make them available on the web server
