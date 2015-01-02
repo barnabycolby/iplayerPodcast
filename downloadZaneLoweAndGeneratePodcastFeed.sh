@@ -69,7 +69,6 @@ do
 done
 
 # Generate the podcast rss feed
-echo "The location of the podcastFeedGenerator script is $podcastFeedGeneratorScript"
 sh $podcastFeedGeneratorScript
 
 # Copy the media files and feed file to the appropriate locations to make them available on the web server
