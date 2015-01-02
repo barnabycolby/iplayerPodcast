@@ -6,7 +6,7 @@ if [[ $# -ne 2 ]]; then
 	exit 1
 fi
 
-configFile='./podcastFeed.cfg'
+configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 source $configFile
 
 # Assign the arguments to variables with more descriptive names

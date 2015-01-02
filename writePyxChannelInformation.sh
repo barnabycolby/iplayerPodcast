@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Read the config file
-configFile=./podcastFeed.cfg
+configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 source $configFile
 
 # Redirect standard output to the pyx output file

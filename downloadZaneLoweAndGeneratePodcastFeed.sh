@@ -12,7 +12,7 @@ echo -n "Script started at: "
 date '+%A %d %B %Y %X'
 
 # Read the config file
-configFile=./podcastFeed.cfg
+configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 echo -n "Reading config....."
 source $configFile
 echo "Done."

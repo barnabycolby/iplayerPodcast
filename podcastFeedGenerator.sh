@@ -4,7 +4,7 @@
 set -e
 
 # Read the config file
-configFile=./podcastFeed.cfg
+configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 echo -n "Reading config....."
 source $configFile
 echo "Done."
