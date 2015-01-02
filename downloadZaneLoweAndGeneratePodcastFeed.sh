@@ -7,6 +7,9 @@ containsElement () {
 	return 1
 }
 
+# Store the script start time so we can write it to the log later
+scriptStartTime="$(date '+%A %d %B %Y %X')"
+
 # Read the config file
 configFile="${HOME}/.iplayerPodcast/podcastFeed.cfg"
 echo -n "Reading config....."
@@ -28,8 +31,7 @@ echo "Done."
 > $logFile
 
 # Write the start time
-echo -n "Script started at: "
-date '+%A %d %B %Y %X'
+echo "Script started at: $scriptStartTime"
 
 # Record the shows
 echo "Running the pvr"
