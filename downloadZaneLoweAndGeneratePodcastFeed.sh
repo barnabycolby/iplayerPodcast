@@ -74,7 +74,7 @@ sh $podcastFeedGeneratorScript
 # Copy the media files and feed file to the appropriate locations to make them available on the web server
 echo -n "Copying the files to the local media file directory....."
 shopt -s nullglob
-cp -u "$showDirectory"/*.{m4a,mp3} $mediaFileDirectoryPath
+cp -u "$showDirectory"/*.{m4a,mp3,jpg} $mediaFileDirectoryPath
 cp $rssOutputFile $mediaFileDirectoryPath
 echo "Done."
 

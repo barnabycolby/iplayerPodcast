@@ -2,10 +2,8 @@ downloadZaneLoweAndGeneratePodcastFeed
 ===========================================
 - Only copy feed to server if it's a valid rss feed
 - Need to prevent the hard drive from getting filled up with shows
-- Use online test to view what feed looks like to a consumer
-- Add podcast image and check that it's available
+- Set permissions of /data/www files so that only nginx user and barnaby can access them
 
 podcastFeedGenerator
 ===========================================
 - Need to research whether I should be calculating mime types by the extension and not by querying the file...little bit dodgy
-- Add album artwork to each podcast item

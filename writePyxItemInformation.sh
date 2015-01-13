@@ -83,4 +83,12 @@ echo "Alength $fileLength"
 echo "Atype $fileMimeType"
 echo "Aurl $url"
 echo ")enclosure"
+
+# Add the episodes image to the item if it exists
+if [ -f $filenameNoExtension.jpg ]; then
+	episodeImageURL="$mediaFileDirectoryURL/$pid.jpg"
+	echo "(itunes:image"
+	echo "Ahref $episodeImageURL"
+	echo ")itunes:image"
+fi
 echo ")item"
