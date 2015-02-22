@@ -35,7 +35,7 @@ echo "Script started at: $scriptStartTime"
 
 # Record the shows
 echo "Running the pvr"
-get_iplayer ".*zane.*lowe.*" --get --type=radio --output $showDirectory --thumbnail --fileprefix="<pid>" --metadata=generic
+get_iplayer ".*zane.*lowe.*" --get --type=radio --output $showDirectory --thumbnail --fileprefix="<pid>" --metadata=generic --modes=flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,flashaachigh,flashaacstd,flashaudio,flashaaclow,wma
 
 # For each downloaded show
 declare -a processedPids
